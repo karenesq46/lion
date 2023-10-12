@@ -1,0 +1,5 @@
+productionfiles
+db.sqlite3
+crud/__pycache__/
+tasks/__pycache__/
+tasks/migrations/__pycache__/
