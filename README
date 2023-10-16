@@ -1,1 +1,41 @@
 my app django
+Aplicación en django, conectada a una base de datos postgres (CRUD)
+
+Crear el entorno virtual
+python3 -m venv venv
+
+Activar el entorno: 
+source venv/bin/active
+
+Paquetes a instalar:
+pip install django
+pip install pillow
+pip install psycopg2-binary
+pip install openpyxl
+
+Crear un proyecto django: 
+django-admin startproject (name) .
+
+Crear una aplicación 
+python3 manage.py startapp (name_app)
+
+Crear las migraciones
+python3 manage.py makemigrations (name_app)
+
+Ejecutar las migraciones
+python3 manage.py migrate
+
+Ejecutar la aplicación 
+python3 manage.py runserver 8000
+
+**************************************************************************************
+DOCKER
+construir imagen
+docker build -t app-django: 1.0 .
+
+Correr el contenedor app-django
+docker run --name app-django -p 8000:8000 -d app-django:1.0
+
+Correr el contenedor PostgreSQL
+docker run --name pg-django -p 5434:5432 -e POSTGRES_PASSWORD=postgres -d postgres:15 
+
